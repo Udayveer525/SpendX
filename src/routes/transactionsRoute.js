@@ -5,12 +5,12 @@ import { getSummaryByUserId, deleteTransaction, createTransaction, getTransactio
 const router = express.Router();
 
 // Routes
+router.get('/summary/:userId', getSummaryByUserId);
+
 router.get('/:userId', getTransactionsByUserId);
 
 router.post('/', createTransaction);
 
 router.delete('/:id', deleteTransaction);
-
-router.get('/summary/:userId', getSummaryByUserId);
 
 export default router;
